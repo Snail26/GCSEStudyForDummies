@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GCSEStudyFD | Home</title>
+    <script defer src="index.js" type="module"></script>
+    <link rel="stylesheet" href="master.css">
+    <style>
+        body {
+            min-height: 150vh;
+        }
+
+        .scroll-watcher {
+            height: 10px;
+            position: fixed;
+            top: 0;
+            z-index: 1023;
+            background-color: lime;
+            width: 100%;
+            scale: 0 1;
+            transform-origin: left;
+            animation: scroll-watcher linear;
+            animation-timeline: scroll();
+        }
+        @keyframes scroll-watcher {
+            to { scale: 1 1; }
+        }
+
+        header#main {
+            text-align: center;
+            padding: 5em;
+            background-color: #ffafaf;
+            border-bottom: 0.1em solid #ffffaf;
+            transition: 2s all cubic-bezier(0.075, 0.52, 0.165, 1);
+            top: 0;
+            /* position: sticky; */
+            display: block;
+            /* z-index: 31; */
+        }
+        header#main:hover {
+            background-color: #afffaf;
+            border-color: #afffaf;
+        }
+        @keyframes articleSwipe {
+            from {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+        }
+
+        article.block {
+            margin: 5em;
+            padding: 3em;
+            display: block;
+            position: relative;
+            border-bottom: 0.1em solid;
+            animation: articleSwipe linear;
+            animation-timeline: scroll();
+        }
+
+        article#first {
+            top: 0;
+            background-color: #afffaf;
+        }
+        article#second {
+            background-color: #afafff;
+            animation-direction: reverse;
+            animation-range: 10% 40%;
+        }
+
+        
+        div.right {
+            float: right;
+            display: inline;
+            position: relative;
+            bottom: 8.5em;
+            text-align: right;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="scroll-watcher"></div>
+    <header id="main">
+        <h1>GCSE Study For Dummies</h1>
+        <h2>Designed to elevate your results!</h2>
+    </header>
+    <article class="block" id="first">
+        <h2>How does it work?</h2>
+        <p>
+            GCSE Study For Dummies uses your previous mistakes allong with <br/>
+            <em>AI data analysis</em> to find and improve you on where you go wrong.<br/>
+        </p>
+        <div class="right">
+            <h2>Why use it?</h2>
+            <p>
+                GCSE Study For Dummies helps to improve your retention of classwork<br/> by routinely testing you in weak areas of study material.
+            </p>
+        </div>
+    </article>
+    <article class="block" id="second">
+        <h2>How does it work?</h2>
+        <p>
+            GCSE Study For Dummies uses your previous mistakes allong with <br/>
+            <em>AI data analysis</em> to find and improve you on where you go wrong.<br/>
+        </p>
+        <div class="right">
+            <h2>Why use it?</h2>
+            <p>
+                GCSE Study For Dummies helps to improve your retention of classwork<br/> by routinely testing you in weak areas of study material.
+            </p>
+        </div>
+    </article>
+    
+</body>
+</html>

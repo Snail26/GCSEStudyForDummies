@@ -1,0 +1,14 @@
+{
+  "name": "gcsestudyfordummies",
+  "version": "1.0.0",
+  "description": "A study tool purpose built for students to study for GCSE exams.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Connor Borrell",
+  "license": "ISC",
+  "dependencies": {
+    "@dataconnect/generated": "file:src/dataconnect-generated"
+  }
+}
