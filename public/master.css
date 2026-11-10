@@ -1,9 +1,52 @@
+:root {
+    /* https://www.figma.com/color-palette-generator/?colors=69DD91-332A29-86E9DA-87CCE8 */
+    --drk: #332A29;
+    --grn: #69DD91;
+    --blu: #87CCE8;
+    --lig: #86E9DA;
+}
+
+/* html {
+    overflow-y: hidden;
+} */
+
 body {
     margin: 0;
     padding: 0;
     height: fit-content;
     width: auto;
-    background-color: #afafaf;
+    background-color: var(--lig);
     font-family: sans-serif;
-    overflow-x: clip;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+body {
+  font-size: 16px;
+}
+.sidebar {
+  display: none; /* Hide sidebar on mobile to save space */
+}
+button {
+  cursor: pointer;
+  background-color: #efefef;
+  border: 1px solid;
+  padding: min(5%, 1em);
+  border-radius: 10px;
+  transition: 0.3s all;
+  font-weight: bold;
+}
+button:hover {
+  background-color: #dfdfdf;
+}
+
+/* 2. Tablet Styles (Screens 768px and wider) */
+@media (min-width: 768px) {
+  body { font-size: 18px; }
+}
+
+/* 3. Desktop Styles (Screens 1024px and wider) */
+@media (min-width: 1024px) {
+  .sidebar {
+    display: block; /* Bring the sidebar back on large screens */
+  }
 }

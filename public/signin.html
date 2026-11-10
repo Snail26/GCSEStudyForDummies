@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GCSEStudyFD | Sign In</title>
+    <link rel="stylesheet" href="master.css">
+    <style>
+        form {
+            background-color: var(--blu);
+            padding: 4em;
+        }
+        label:has(input[required])::after {
+            content: " *";
+            color: var(--drk);
+        }
+        /* #ageLabel::after {
+            content: "?";
+            color: black;
+            padding: min(2%, 0.5em);
+            background-color: var(--grn);
+            border: 1px solid;
+            transition: 1.5s all;
+        }
+        #ageLabel:hover::after {
+            content: "This is just used for your stats :D";
+        } */
+        @media (min-width: 768px) {
+
+        }
+    </style>
+</head>
+<body>
+    <form action="signin.html" method="post">
+        <h2>Sign In</h2>
+        <label for="username">
+            Pick a username:
+            <input id="username" type="text" placeholder="Type a username here..." required>
+        </label>
+        <br/>
+        <br/>
+        <label for="password">
+            Choose a password:
+            <input id="password" type="password" placeholder="Enter a password here..." required>
+        </label>
+        <br/>
+        <br/>
+        <label for="cPassword">
+            Confirm your password:
+            <input id="cPassword" type="password" placeholder="Enter your password again here..." required>
+        </label>
+        <br/>
+        <br/>
+        <label for="age" id="ageLabel">
+            I am
+            <input id="age" type="number" min="5" max="120" value="16" placeholder="Enter your age here...">
+             years old! 
+        </label>
+        <br/>
+        <br/>
+        <button type="submit" id="submit">Sign In!</button>
+    </form>
+</body>
+</html>

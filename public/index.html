@@ -3,35 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GCSEStudyFD | Home</title>
+    <title>GCSEStudyFD | Elevate Your Results!</title>
     <script defer src="index.js" type="module"></script>
     <link rel="stylesheet" href="master.css">
     <style>
-        /* body {
+        body {
             overflow-x: hidden;
-        } */
-
-        .scroll-watcher {
-            height: 10px;
-            position: fixed;
-            top: 0;
-            z-index: 1023;
-            background-color: lime;
-            width: 100%;
-            scale: 0 1;
-            transform-origin: left;
-            animation: scroll-watcher linear;
-            animation-timeline: scroll();
         }
-        @keyframes scroll-watcher {
-            to { scale: 1 1; }
-        }
-
-        header#main {
+         header#main {
             text-align: center;
-            padding: 5em;
-            background-color: #ffafaf;
-            border-bottom: 0.1em solid #ffffaf;
+            padding: min(1em, 5%);
+            background-color: var(--grn);
             transition: 2s all cubic-bezier(0.075, 0.52, 0.165, 1);
             top: 0;
             /* position: sticky; */
@@ -40,113 +22,246 @@
             animation-name: strobe;
             animation-duration: 18s;
             animation-iteration-count: infinite;
-            min-height: 20vh;
-        }
-        #title-wrapper {
-            margin-top: auto;
-        }
-        @keyframes strobe {
-            33% {
-                background-color: #afffaf;
-            }
-            66% {
-                background-color: #afafff;
-            }
-            100% {
-                background-color: #ffafaf;
-            }
-        }
-        header#main:hover {
-            box-shadow: inset 0 0 1em 1em;
-        }
-        @keyframes articleSwipe {
-            from {
-                transform: translateX(0);
-                opacity: 1;
-            }
-            to {
-                transform: translateX(100%);
-                opacity: 0;
-            }
-        }
+            /* box-shadow: inset 0 -1em 1em 0em; */
 
+        }
         article.block {
-            margin: 5em;
+            margin: 1em;
             padding: 3em;
-            opacity: 1;
             display: block;
             position: relative;
             border-bottom: 0.1em solid;
-            animation: articleSwipe linear forwards;
-            animation-timeline: view(40%);
-            transform: translateX(0);
-            
         }
-
         article#first {
             top: 0;
-            opacity: 1;
-            background-color: #afffaf;
-            /* animation-timeline: view(); */
-            
+            background-color: var(--grn);
         }
         article#second {
-            opacity: 1;
-            background-color: #afafff;
+            /* opacity: 1; */
+            background-color: var(--blu);
             /* animation-direction: ; */
             
             /* animation-range: 10% 40%; */
         }
 
-        
-        div.right {
-            float: right;
-            display: inline;
-            position: relative;
-            bottom: 8.5em;
-            text-align: right;
-        }
-
-        #spacer {
-            min-height: 15em;
-        }
         #try {
-            opacity: 0;
-            background-color: #3f3f3f;
-            background-image: url("images/questionDemo.png");
-            color: #afffaf;
-            min-height: 120vh;
-            animation: appear, cubic-bezier(0.19, 1, 0.22, 1), forwards;
-            animation-timeline: view();
-            animation-range: contain, 1px;
+            background-color: var(--drk);
+            color: var(--lig);
             text-align: center;
-            padding: 0;
-            padding-top: 75vh;
+            padding-top: min(2em, 5%);
+            padding-bottom: min(5em, 10%);
             margin: 0;
         }
-        @keyframes appear {
-            from {opacity: 0;}
-            to {opacity: 1;}
+        footer {
+            padding: min(1em, 5%);
+            background-color: var(--blu);
         }
-        #tryBtn-wrapper {
-            background-color: #3f3f3f;
-            background-blend-mode: hue;
-            margin: 25em;
-            padding: 2em;
-            border-radius: 3em;
-            box-shadow: 0 0 1em 1em;
+        @media (min-width: 1350px) {
+            footer {
+                display: none;
+            }
+            .scroll-watcher {
+                height: 10px;
+                position: fixed;
+                top: 0;
+                z-index: 1023;
+                background-color: var(--blu);
+                width: 100%;
+                scale: 0 1;
+                transform-origin: left;
+                animation: scroll-watcher linear;
+                animation-timeline: scroll();
+            }
+            @keyframes scroll-watcher {
+                to { scale: 1 1; }
+            }
+
+            header#main {
+                text-align: center;
+                padding: 5em;
+                background-color: var(--grn);
+                /* border-bottom: 0.1em solid #ffffaf; */
+                transition: 2s all cubic-bezier(0.075, 0.52, 0.165, 1);
+                top: 0;
+                /* position: sticky; */
+                display: block;
+                /* z-index: 31; */
+                animation-name: strobe;
+                animation-duration: 18s;
+                animation-iteration-count: infinite;
+                min-height: 20vh;
+                box-shadow: inset 0 -1em 1em 0em;
+
+            }
+            #title-wrapper {
+                margin-top: auto;
+            }
+            /* #title-text::before {
+                content: "-";
+                animation-iteration-count: infinite;
+                animation-duration: 2.5s;
+                animation-name: title-before;
+            }
+            #title-text::after {
+                content: "-";
+            } */
+            /* @keyframes title-before {
+                0% {
+                    content: "-";
+                }
+                75% {
+                    content: "-";
+                }
+                85% {
+                    content: "🔥-";
+                }
+                90% {
+                    content: "🔥 -";
+                }
+                100% {
+                    content: "🔥  -";
+                }
+            } */
+            @keyframes strobe {
+                25% {
+                    background-color: var(--grn);
+                }
+                50% {
+                    background-color: var(--blu);
+                }
+                75% {
+                    background-color: var(--lig);
+                }
+                100% {
+                    background-color: var(--grn);
+                }
+            }
+            /* header#main:hover {
+                box-shadow: inset 0 0 1em 1em;
+            } */
+            /* @keyframes articleSwipe {
+                from {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+                to {
+                    transform: translateX(100%);
+                    opacity: 0;
+                }
+            } */
+
+            article.block {
+                margin: 5em;
+                padding: 3em;
+                /* opacity: 1; */
+                display: block;
+                position: relative;
+                border-bottom: 0.1em solid;
+                /* animation: appear linear forwards;
+                animation-timeline: view(90%);
+                transform: translateX(0); */
+                
+            }
+
+            article#first {
+                top: 0;
+                /* opacity: 1; */
+                background-color: var(--grn);
+                /* animation-timeline: view(); */
+                
+            }
+            article#second {
+                /* opacity: 1; */
+                background-color: var(--blu);
+                /* animation-direction: ; */
+                
+                /* animation-range: 10% 40%; */
+            }
+
+            
+            div.right {
+                float: right;
+                display: inline;
+                position: relative;
+                bottom: 8.5em;
+                text-align: right;
+            }
+
+            /* #spacer {
+                min-height: 15em;
+            } */
+            #try {
+                opacity: 0;
+                background-color: var(--drk);
+                background-image: url("images/questionDemo.png");
+                
+                
+                color: var(--lig);
+                height: fit-content;
+                animation: appear linear forwards;
+                animation-timeline: view(-80%);
+                animation-range: contain 1px;
+                text-align: center;
+                padding: 0;
+                /* padding-top: 75vh; */
+                padding-bottom: 5vh;
+                margin: 0;
+            }
+            @keyframes appear {
+                from {opacity: 0;}
+                to {opacity: 1;}
+            }
+            #blur {
+                animation: appear cubic-bezier(0.19, 1, 0.22, 1) forwards;
+                animation-timeline: view();
+                animation-range: contain 1px;
+                backdrop-filter: blur(5px);
+                width: 100%;
+                min-height: fit-content;
+                margin: 0;
+                padding: 0;
+                padding-top: 75vh;
+                padding-bottom: 5vh;
+                background-color: rgba(255, 255, 255, 0.4);
+                /* top: 75vh;
+                position: relative; */
+            }
+            #tryBtn-wrapper {
+                background-color: var(--drk);
+                background-blend-mode: hue;
+                margin: 25em;
+                padding: 2em;
+                border-radius: 3em;
+                box-shadow: 0 0 1em 1em;
+            }
+            #tryBtn {
+                padding: 0.5em;
+                border-radius: 1em;
+                font-size: large;
+                text-decoration: none;
+                color: black;
+                background-color: var(--grn);
+                animation-name: strobe;
+                animation-duration: 10s;
+                animation-iteration-count: infinite;
+            }
+            #tryBtn::before {
+                content: "🔥";
+                opacity: 1;
+                animation: appear, cubic-bezier(0.19, 1, 0.22, 1), forwards;
+                animation-timeline: view();
+                animation-range: contain, 1px;
+            }
+            #tryBtn::after {
+                content: "🔥";
+                opacity: 1;
+                animation: appear, cubic-bezier(0.19, 1, 0.22, 1), forwards;
+                animation-timeline: view();
+                animation-range: contain, 1px;
+            }
         }
-        #tryBtn {
-            padding: 0.5em;
-            border-radius: 1em;
-            font-size: large;
-            text-decoration: none;
-            color: black;
-            background-color: #ffafaf;
-            animation-name: strobe;
-            animation-duration: 6s;
-            animation-iteration-count: infinite;
-        }
+
+        
 
     </style>
 </head>
@@ -155,49 +270,57 @@
 
     <header id="main">
         <div id="title-wrapper">
-            <h1>GCSE Study For Dummies</h1>
-            <h2>Designed to elevate your results!</h2>
+            <h1 id="title-text">GCSE Study For Dummies</h1>
+            <h2>Elevate your results!</h2>
         </div>
     </header>
-    <article id="spacer">
+    <!-- <article id="spacer">
 
-    </article>
+    </article> -->
     <article class="block" id="first">
         <h2>How does it work?</h2>
         <p>
-            GCSE Study For Dummies uses your previous mistakes allong with <br/>
-            <em>AI data analysis</em> to find and improve you on where you go wrong.<br/>
+            GCSE Study For Dummies uses your previous mistakes along with <br/>
+            <em>Machine Learning</em> to find and improve you on where you go wrong.<br/>
         </p>
+        <br/>
+        <br/>
         <div class="right">
             <h2>Why use it?</h2>
             <p>
-                GCSE Study For Dummies helps to improve your retention of classwork<br/> by routinely testing you in weak areas of study material.
+                GCSE Study For Dummies helps to improve your retention of <br/>classwork by routinely testing you on weak areas of study material.
             </p>
         </div>
     </article>
     <article class="block" id="second">
-        <h2>How does it work?</h2>
+        <h2>Social Aspect</h2>
         <p>
-            GCSE Study For Dummies uses your previous mistakes allong with <br/>
-            <em>AI data analysis</em> to find and improve you on where you go wrong.<br/>
+            <strong>Compete with friends</strong> to see who can study<br/> more often and who has the highest accuracy!<br/>
         </p>
+        <br/>
         <div class="right">
-            <h2>Why use it?</h2>
+            <h2>It's all free!</h2>
             <p>
-                GCSE Study For Dummies helps to improve your retention of classwork<br/> by routinely testing you in weak areas of study material.
+                All features of GCSE Study For Dummies are <strong>free</strong> and will stay that way.
             </p>
         </div>
     </article>
     <div id="try">
-        <div id="tryBtn-wrapper">
-            <h2>
-                <label for="tryBtn">Try it now...</label>
-            </h2>
-            <a href="/signup.html">
-                <button id="tryBtn">Create an account</button>
-            </a>
+        <div id="blur">
+            <div id="tryBtn-wrapper">
+                <h2>
+                    <label for="tryBtn">Try it now...</label>
+                </h2>
+                <a href="/signin.html">
+                    <button id="tryBtn">Create an account</button>
+                </a>
+            </div>
         </div>
     </div>
+
+    <footer>
+        <p>Logibox 2026</p>
+    </footer>
     
 </body>
 </html>
